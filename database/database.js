@@ -3,10 +3,10 @@ const path = require('path');
 const dotenv = require('dotenv').config({ path: path.resolve(__dirname, '../.env') });
 
 var config = {
-    user: dotenv.DB_USER || 'sa',
-    password: dotenv.DB_PASSWORD || 'Jupilandia1978',
-    server: dotenv.DB_SERVER || 'LOCALHOST', 
-    database: dotenv.DB_DATABASE || 'STOCK',
+    user: dotenv.DB_USER || 'pepe',
+    password: dotenv.DB_PASSWORD || 'Miclave1234',
+    server: dotenv.DB_SERVER || 'pepe', 
+    database: dotenv.DB_DATABASE || 'DB',
     options: {
       cryptoCredentialsDetails: {
         minVersion: 'TLSv1'

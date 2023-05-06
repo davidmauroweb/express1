@@ -3,7 +3,7 @@ const ProductService = require('../services/product.service');
 class ProductController {
 
 static async get(req, res) {
-
+    
         return ProductService.get(req.params.id)
         .then(function(products) {
             return res.status(200).json(products)

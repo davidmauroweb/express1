@@ -1,21 +1,21 @@
-const DB = require('../database/database');
+const DB = require('../database/database.js');
 const sql = require('mssql');
 
 class ProductService {
 
 static async get(id) {
-  try {
+/*  try {*/
     let qry = "SELECT * FROM vwGetProducts WHERE idproduct = CASE WHEN @id IS NULL THEN idproduct ELSE @id END";
+    console.log('leyo la', qry);
     let pool = await DB.connect();
-    let products = await pool.request()
-    .input('id', sql.Int, id)
-    .query(qry);
+    console.log('pool : ', pool);
+    let products = await pool.request().input('id', sql.Int, id).query(qry);
     if(products.rowsAffected > 0) return products.recordset; 
     else return [];  
-  }
+/*  }
   catch (err) {
-      throw 'Error inesperado'
-  }
+      throw 'Error inesperado en GET Products'
+  }*/
 }  
 async create(data) {
 
