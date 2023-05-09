@@ -88,6 +88,19 @@ SELECT @idproduct = SCOPE_IDENTITY()
 END
 GO
 
+CREATE PROCEDURE spCreateCategory
+@description VARCHAR(100),
+@idcategory INT OUTPUT
+AS
+BEGIN
+INSERT INTO categories (description) 
+VALUES (@description)
+SELECT @idcategory = SCOPE_IDENTITY()
+END
+GO
+
+
+
 DECLARE @id INT
 EXEC spCreateProduct 5, 'TEST', '', 100.10, 5, @id OUTPUT
 SELECT @id
