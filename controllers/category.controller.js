@@ -24,5 +24,16 @@ async create(req, res){
      });
 
 }
+
+static async list(req, res) {
+    return  CategoryService.list(req.params.q)
+    .then(function(categories) {
+         return res.status(200).json(categories)
+     })
+     .catch(function(err) {
+         return res.status(400).json({error: err.message})
+     });
+}
+
 }
 module.exports = CategoryController; 
