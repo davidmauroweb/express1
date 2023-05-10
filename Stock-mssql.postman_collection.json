@@ -13,7 +13,7 @@
 					"apikey": [
 						{
 							"key": "value",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVjayI6dHJ1ZSwiaWF0IjoxNjgzNzE5OTgyLCJleHAiOjE2ODM3MjE0MjJ9.EQxJeWdn-ywXDI3pnPqVJCAY7GSBupmmYSXr0DK-T7Q",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVjayI6dHJ1ZSwiaWF0IjoxNjgzNzM1ODU4LCJleHAiOjE2ODM3MzcyOTh9.VwnoeCNw-nDbWctIsdwI886UTYpoDw-VKuQCJIGZlsc",
 							"type": "string"
 						},
 						{
@@ -230,7 +230,7 @@
 					"apikey": [
 						{
 							"key": "value",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVjayI6dHJ1ZSwiaWF0IjoxNjgzNzIxNDY0LCJleHAiOjE2ODM3MjI5MDR9.VDQfEPCdTD2hRx-kPzi8-9bfswZUMmyC9Vr33s4nF50",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVjayI6dHJ1ZSwiaWF0IjoxNjgzNzM5MDgyLCJleHAiOjE2ODM3NDA1MjJ9.ESA9GCBaQ1GfBfAwiUE8dK_UsTVrK_WJK-AZ1ebb7p8",
 							"type": "string"
 						},
 						{
@@ -242,6 +242,15 @@
 				},
 				"method": "PATCH",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"idcategory\":\"1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
 					"raw": "http://localhost:3002/api/products/1",
 					"protocol": "http",
@@ -379,6 +388,89 @@
 						"api",
 						"auth",
 						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3002/api/categories/nueva/NuevaCat",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVjayI6dHJ1ZSwiaWF0IjoxNjgzNzQwNzY0LCJleHAiOjE2ODM3NDIyMDR9.BXZSBFzCWE4nfu1bqQU--g7D_ZpNjpyE7EBOZgPTijw",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "access-token",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"description\":\"nuevacat44\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3002/api/categories/nueva/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"api",
+						"categories",
+						"nueva",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3002/api/categories/list/20",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVjayI6dHJ1ZSwiaWF0IjoxNjgzNzQyMjE0LCJleHAiOjE2ODM3NDM2NTR9.A_erspFPNDiuMwgm5vW8bwpahUoACm5PJHbAIQ_igrQ",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "access-token",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3002/api/categories/list/20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"api",
+						"categories",
+						"list",
+						"20"
 					]
 				}
 			},
