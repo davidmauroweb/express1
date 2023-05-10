@@ -3,17 +3,16 @@ const path = require('path');
 const dotenv = require('dotenv').config({ path: path.resolve(__dirname, '../.env') });
 
 var config = {
-    user: dotenv.DB_USER || 'pepe',
-    password: dotenv.DB_PASSWORD || 'Miclave1234',
-    server: dotenv.DB_SERVER || 'pepe', 
-    database: dotenv.DB_DATABASE || 'DB',
+    user: dotenv.DB_USER || 'SA',
+    password: dotenv.DB_PASSWORD || 'Jupilandia1978',
+    server: dotenv.DB_SERVER || 'localhost', 
+    database: dotenv.DB_DATABASE || 'STOCK',
     options: {
       cryptoCredentialsDetails: {
         minVersion: 'TLSv1'
       },
       trustServerCertificate: true,
-      encrypt: false, 
-      instanceName: 'SQLEXPRESS'
+      encrypt: true
     }
   }
 

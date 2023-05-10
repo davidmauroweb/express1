@@ -1,9 +1,12 @@
 const express = require('express');
-
 const CategoryController = require('../controllers/category.controller');
+const CategorySchema = require('../schemas/category.schema');
+const validatorHandler = require('../middlewares/validator.handler');
 const validatorLogin = require('../middlewares/validator.login');
+const { func } = require('joi');
 
 const router = express.Router();
-
-router.get('/', validatorLogin, function(req, res) { CategoryController.get(req, res) })
+const Controller = new CategoryController();
+router.get('/', validatorLogin, function(req, res) { Controller.get(req, res)})
+router.post('/nueva/', [validatorLogin, validatorHandler(CategorySchema)],Controller.create)
 module.exports = router;

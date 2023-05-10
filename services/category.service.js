@@ -1,6 +1,9 @@
+const { pool } = require('mssql');
 const DB = require('../database/database');
 
-async function get() {
+class CategoryService {
+
+static async get() {
   let pool = await DB.connect();
   return new Promise(function (resolve, reject) {
     let qry = "SELECT * FROM categories";
@@ -13,4 +16,15 @@ async function get() {
     });
   }) 
 }
-exports.get = get;
+static async create(categ) {
+return DB.connect().then(pool => {
+return pool.request()
+.input('desciption', sql.VarChar(100), categ.description)
+.output('idcategory', sql.Int)
+.execute('spCreateCategory')})
+.then(function(value) { return value.output })
+.catch(function(err) { throw 'Error en la descripción' });
+}
+
+}
+module.exports = CategoryService; 

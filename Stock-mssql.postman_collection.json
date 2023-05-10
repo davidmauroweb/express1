@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "0ba58796-294a-4a21-bda7-f3221f5b5389",
+		"_postman_id": "beb92917-c666-442b-8625-2dd3e610394b",
 		"name": "Stock-mssql",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -13,7 +13,7 @@
 					"apikey": [
 						{
 							"key": "value",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVjayI6dHJ1ZSwiaWF0IjoxNjgwODc1NzcyLCJleHAiOjE2ODA4NzcyMTJ9.mZ_GtMh_HWdutypfXy6jCoVr-UhHEBKoSvaL2xOhDI0",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVjayI6dHJ1ZSwiaWF0IjoxNjgzNzE5OTgyLCJleHAiOjE2ODM3MjE0MjJ9.EQxJeWdn-ywXDI3pnPqVJCAY7GSBupmmYSXr0DK-T7Q",
 							"type": "string"
 						},
 						{
@@ -47,7 +47,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3002/api/products/4",
+					"raw": "http://localhost:3002/api/products/",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -56,7 +56,7 @@
 					"path": [
 						"api",
 						"products",
-						"4"
+						""
 					]
 				}
 			},
@@ -65,11 +65,26 @@
 		{
 			"name": "http://localhost:3002/api/products",
 			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVjayI6dHJ1ZSwiaWF0IjoxNjgzNzE5OTgyLCJleHAiOjE2ODM3MjE0MjJ9.EQxJeWdn-ywXDI3pnPqVJCAY7GSBupmmYSXr0DK-T7Q",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "access-token",
+							"type": "string"
+						}
+					]
+				},
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\"idcategory\":\"1\",\r\n\"denomination\":\"API POSTMAN\",\r\n\"additional_info\":\"\",\r\n\"price\":\"50.70\",\r\n\"stock\":\"100\"\r\n}",
+					"raw": "{\r\n\"idcategory\":\"1\",\r\n\"denomination\":\"API POSTMAN - Prod para Eliminar\",\r\n\"additional_info\":\"Contexto\",\r\n\"price\":\"500\",\r\n\"stock\":\"10\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -92,12 +107,27 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:3002/api/products/28",
+			"name": "http://localhost:3002/api/products/8",
 			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVjayI6dHJ1ZSwiaWF0IjoxNjgzNzE5OTgyLCJleHAiOjE2ODM3MjE0MjJ9.EQxJeWdn-ywXDI3pnPqVJCAY7GSBupmmYSXr0DK-T7Q",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "access-token",
+							"type": "string"
+						}
+					]
+				},
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3002/api/products/28",
+					"raw": "http://localhost:3002/api/products/8",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -106,7 +136,7 @@
 					"path": [
 						"api",
 						"products",
-						"28"
+						"8"
 					]
 				}
 			},
@@ -115,11 +145,26 @@
 		{
 			"name": "http://localhost:3002/api/products",
 			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVjayI6dHJ1ZSwiaWF0IjoxNjgzNzIxNDY0LCJleHAiOjE2ODM3MjI5MDR9.VDQfEPCdTD2hRx-kPzi8-9bfswZUMmyC9Vr33s4nF50",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "access-token",
+							"type": "string"
+						}
+					]
+				},
 				"method": "PUT",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\"idproduct\":\"7\",\r\n\"idcategory\":\"5\",\r\n\"denomination\":\"Updated\",\r\n\"additional_info\":\"\",\r\n\"price\":\"20.66\",\r\n\"stock\":\"18\"\r\n}",
+					"raw": "{\r\n\"idproduct\":\"7\",\r\n\"idcategory\":\"5\",\r\n\"denomination\":\"Actualizo Prod 7\",\r\n\"additional_info\":\"\",\r\n\"price\":\"20.66\",\r\n\"stock\":\"18\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -144,10 +189,25 @@
 		{
 			"name": "http://localhost:3002/api/movements/4",
 			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVjayI6dHJ1ZSwiaWF0IjoxNjgzNzIxNDY0LCJleHAiOjE2ODM3MjI5MDR9.VDQfEPCdTD2hRx-kPzi8-9bfswZUMmyC9Vr33s4nF50",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "access-token",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3002/api/movements/4",
+					"raw": "http://localhost:3002/api/movements/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -156,19 +216,34 @@
 					"path": [
 						"api",
 						"movements",
-						"4"
+						"1"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "http://localhost:3002/api/products/aaa",
+			"name": "http://localhost:3002/api/products/1",
 			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVjayI6dHJ1ZSwiaWF0IjoxNjgzNzIxNDY0LCJleHAiOjE2ODM3MjI5MDR9.VDQfEPCdTD2hRx-kPzi8-9bfswZUMmyC9Vr33s4nF50",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "access-token",
+							"type": "string"
+						}
+					]
+				},
 				"method": "PATCH",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3002/api/products/aaa",
+					"raw": "http://localhost:3002/api/products/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -177,7 +252,7 @@
 					"path": [
 						"api",
 						"products",
-						"aaa"
+						"1"
 					]
 				}
 			},
@@ -186,11 +261,26 @@
 		{
 			"name": "http://localhost:3002/api/movements/",
 			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVjayI6dHJ1ZSwiaWF0IjoxNjgzNzIxNDY0LCJleHAiOjE2ODM3MjI5MDR9.VDQfEPCdTD2hRx-kPzi8-9bfswZUMmyC9Vr33s4nF50",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "access-token",
+							"type": "string"
+						}
+					]
+				},
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\"idproduct\":\"1\",\r\n\"quantity\":\"5\",\r\n\"observations\":\"Esto es una prueba\"\r\n}",
+					"raw": "{\r\n\"idproduct\":\"1\",\r\n\"quantity\":\"-5\",\r\n\"observations\":\"Esto es una prueba de resta\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -214,12 +304,27 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:3002/api/movements/16",
+			"name": "http://localhost:3002/api/movements/5",
 			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVjayI6dHJ1ZSwiaWF0IjoxNjgzNzIxNDY0LCJleHAiOjE2ODM3MjI5MDR9.VDQfEPCdTD2hRx-kPzi8-9bfswZUMmyC9Vr33s4nF50",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "access-token",
+							"type": "string"
+						}
+					]
+				},
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3002/api/movements/20",
+					"raw": "http://localhost:3002/api/movements/4",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -228,7 +333,7 @@
 					"path": [
 						"api",
 						"movements",
-						"20"
+						"4"
 					]
 				}
 			},

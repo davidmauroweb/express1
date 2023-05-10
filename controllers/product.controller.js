@@ -17,7 +17,9 @@ static async get(req, res) {
 async create(req, res) {
 
     let product = new ProductService();
-    return product.create(req.body).then(function(idproduct) {
+    console.log(req.body)
+    return product.create(req.body)
+    .then(function(idproduct) {
         return res.status(201).json(idproduct)
     })
     .catch(function(err) {
@@ -61,4 +63,4 @@ static async delete(req, res) {
 }
 }
 
-module.exports =ProductController
+module.exports = ProductController
