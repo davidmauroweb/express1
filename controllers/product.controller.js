@@ -17,7 +17,6 @@ static async get(req, res) {
 async create(req, res) {
 
     let product = new ProductService();
-    console.log(req.body)
     return product.create(req.body)
     .then(function(idproduct) {
         return res.status(201).json(idproduct)

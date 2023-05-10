@@ -93,7 +93,7 @@ CREATE PROCEDURE spCreateCategory
 @idcategory INT OUTPUT
 AS
 BEGIN
-INSERT INTO categories (description) 
+INSERT INTO categories (description)
 VALUES (@description)
 SELECT @idcategory = SCOPE_IDENTITY()
 END

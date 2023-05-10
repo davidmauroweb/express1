@@ -8,5 +8,5 @@ const { func } = require('joi');
 const router = express.Router();
 const Controller = new CategoryController();
 router.get('/', validatorLogin, function(req, res) { Controller.get(req, res)})
-router.post('/nueva/', [validatorLogin, validatorHandler(CategorySchema)],Controller.create)
+router.post('/nueva/', validatorLogin, Controller.create)
 module.exports = router;
