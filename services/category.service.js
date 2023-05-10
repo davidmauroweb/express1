@@ -1,3 +1,4 @@
+const { pool } = require('mssql');
 const DB = require('../database/database');
 const sql = require('mssql');
 class CategoryService {
